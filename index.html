@@ -19,44 +19,44 @@
             <fieldset>
                 <!-- Dados Pessoais -->
                 <legend>Dados Pessoais</legend>
-                <label for="userName">Nome</label>
-                <input type="text" name="userName" required>
+                <label for="name">Nome</label>
+                <input type="text" name="userName" id="name" required>
                 <br>
 
-                <label for="userAge">Idade</label>
-                <input type="number" name="userAge" min="12" max="100" required>
+                <label for="age">Idade</label>
+                <input type="number" id="age" name="userAge" min="12" max="100" required>
                 <br>
 
                 <label for="birthDate">Data de nascimento</label>
-                <input type="date" name="birthDate">
+                <input type="date" name="userBirthDate" id="birthDate">
                 <br>
 
-                <label for="userEmail">Email</label>
-                <input type="email" name="userEmail">
+                <label for="email">Email</label>
+                <input type="email" name="userEmail" id="email">
                 <br>
 
-                <label for="userPhoneNumber">Telefone</label>
-                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="()____-____">
+                <label for="phone">Telefone</label>
+                <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="()____-____" id="phone">
                 <br>
 
-                <label for="userImage">Upload de fotos</label>
-                <input type="file" name="userImage" accept="image/*">
+                <label for="image">Upload de fotos</label>
+                <input type="file" name="userImage" accept="image/*" id="image">
                 <br>
             </fieldset>
             <fieldset>
                 <!-- Dados de perfil -->
                 <legend>Perfil</legend>
                 <p>Gênero:</p>
-                <input type="radio" name="userGender" value="Feminino">
-                <label for="userGender">Feminino</label>
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label>
-                <input type="radio" name="userGender" value="notInformed">
-                <label for="userGender">Prefiro não informar</label>
+                <input type="radio" name="userGender" value="Feminino" id="fem">
+                <label for="fem">Feminino</label>
+                <input type="radio" name="userGender" value="Masculino" id="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="userGender" value="notInformed" id="notInformed">
+                <label for="notInformed">Prefiro não informar</label>
                 <br>
 
                 <label for="maritalStatus">Estado cívil</label>
-                <select name="maritalStatus">
+                <select id="maritalStatus" name="userMaritalStatus">
                     <option value="norInformed">Selecione...</option>
                     <option value="Married">Casado(a)</option>
                     <option value="Single">Solteiro(a)</option>
@@ -66,8 +66,8 @@
                 </select>
                 <br>
 
-                <label for="userState">Estados:</label>
-                <select name="userState" required>
+                <label for="state">Estados:</label>
+                <select id="state" name="userState" required>
                     <option value="acre">Acre</option>
                     <option value="alagoas">Alagoas</option>
                     <option value="amapa">Amapá</option>
@@ -98,11 +98,40 @@
                 </select>
                 <br>
 
-                <label for="userCity">Cidade:</label>
-                <input type="text" id="userCity" name="userCity" placeholder="Ex.: Fortaleza"
-                    autocomplete="address-level2">
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="userCity" placeholder="Ex.: Fortaleza" autocomplete="address-level2">
             </fieldset>
+            <fieldset>
+                <legend>Hábitos</legend>
+                <p>Redes Sociais:</p>
+                <input type="checkbox" name="social" id="instagram" value="instagram">
+                <label for="instagram">Instagram</label>
+                <br>
+                <input type="checkbox" name="social" id="facebook" value="facebook">
+                <label for="facebook">Facebook</label>
+                <br>
+                <input type="checkbox" name="social" id="linkedin" value="Linkedin">
+                <label for="linkedin">Linkedin</label>
+                <br>
+                <input type="checkbox" name="social" id="x" value="X">
+                <label for="x">X</label>
+                <br>
 
+                <label for="musicStyle">Estilo musical:</label>
+                <input type="text" name="userMusicStyle" id="musicStyle" list="styleTypes">
+                <datalist id="styleTypes">
+                    <option value="Rock">
+                    <option value="Pop">
+                    <option value="Samba">
+                    <option value="Sertanejo">
+                </datalist>
+                <br>
+
+                <label for="favoriteColor">Cor favorita</label>
+                <input type="color" name="userFavoriteColor" id="favoriteColor">
+                <br>
+
+            </fieldset>
             <button type="submit">Enviar</button>
         </form>
     </section>
