@@ -42,7 +42,9 @@
                     <br>
 
                     <label for="phone">Telefone</label>
-                    <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="()____-____" id="phone">
+                    <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" aria-describedby="phoneHelp"
+                        placeholder="()____-____" id="phone">
+                    <small id="phoneHelp">Preencha com 11 dígitos no formato: DDD + número sem espaços ou hífen.</small>
                     <br>
 
                     <label for="image">Upload de fotos</label>
