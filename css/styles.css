@@ -2,6 +2,9 @@
     --cor-de-fundo: #f9f9f9;
     --fundo-do-formulario: #ffffff;
     --cor-da-borda: #CCCCCC;
+    --cor-requido-n-invalido: red;
+    --cor-requido-valido: green;
+    --cor-botao-laranja: orangered;
 }
 
 * {
@@ -38,6 +41,7 @@ form {
     background-color: var(--fundo-do-formulario);
     padding: 15px;
     border-radius: 10px;
+    margin-bottom: 100px;
 }
 
 fieldset {
@@ -56,6 +60,10 @@ legend {
 label {
     display: inline-block;
     margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 input,
@@ -80,4 +88,38 @@ input[type="checkbox"] {
 input[type="color"] {
     width: 40px;
     padding: 0 5px;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: var(--cor-requido-n-invalido)
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: var(--cor-requido-valido)
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: var(--fundo-do-formulario);
+    border: 1px solid var(--cor-da-borda);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-requido-valido);
+    color: var(--fundo-do-formulario);
+
+}
+
+button[type="reset"]:hover {
+    background-color: var(--cor-botao-laranja);
+    color: var(--fundo-do-formulario);
+
 }
